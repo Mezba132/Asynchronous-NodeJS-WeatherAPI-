@@ -1,0 +1,16 @@
+{
+  "name": "weather_forecast",
+  "version": "1.0.0",
+  "description": "Weather API Test",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "LeoMezba",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
