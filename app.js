@@ -8,6 +8,7 @@ const app = express();
 // app.use(bodyParser.json());
 const baseRouter = require('./router/baseRouter');
 app.use(baseRouter);
+
 // app.get("/", function(req,res) {
 //   // const url = "https://api.openweathermap.org/data/2.5/weather?q=Dhaka,BD&appid=a5f490d51fc479a6f031e33819698f78&units=metric";
 //   let url = "http://api.openweathermap.org/data/2.5/weather?q=Dhaka,BD&appid=a5f490d51fc479a6f031e33819698f78&units=metric";
