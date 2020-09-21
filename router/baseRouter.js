@@ -1,5 +1,7 @@
 const router = require('express').Router(),
-axios = require('axios');
+axios = require('axios'),
+apiConfig = require('../Config.js').API_CONFIG
+countries = require('../Constents.js').COUNTRIES;
 
 router.get('/weather', (req, res) => {
   fetchWeatherAsync().then(response => res.json(response.data))
@@ -7,7 +9,9 @@ router.get('/weather', (req, res) => {
 })
 
 async function fetchWeatherAsync(){
-  const url = "http://api.openweathermap.org/data/2.5/weather?q=Dhaka,BD&appid=a5f490d51fc479a6f031e33819698f78&units=metric";
+  const url = apiConfig.getFullUrl(countries.BD.DHAKA);
+  console.log(url);
+  console.log("http://api.openweathermap.org/data/2.5/weather?q=Dhaka,BD&appid=a5f490d51fc479a6f031e33819698f78&units=metric");
   let response = await axios.get(url);
   return response;
 }
