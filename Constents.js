@@ -8,3 +8,5 @@ module.exports.COUNTRIES = {
     HUSTON: "Huston,TX"
   }
 }
+
+module.exports.STATES = ['dhaka', 'khulna', 'paris', 'london'];
